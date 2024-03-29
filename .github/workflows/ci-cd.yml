@@ -13,7 +13,7 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: api/src
+        working-directory: app
     steps:
     - uses: actions/checkout@v3
       with:
@@ -33,7 +33,7 @@ jobs:
       contents: write
     defaults:
       run:
-        working-directory: api/src
+        working-directory: app
     steps:
     - uses: actions/checkout@v3
       with:
@@ -49,6 +49,6 @@ jobs:
     - name: Commit formatted code
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: "chore(api): format code"
+        commit_message: "chore: format code"
         skip_fetch: true
         

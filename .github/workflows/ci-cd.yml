@@ -4,11 +4,11 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'api/src/**'
+      - 'app/**'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'api/src/**'
+      - 'app/**'
 
 jobs:
   test:
@@ -30,7 +30,7 @@ jobs:
       run: composer update -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Execute PHPUnit
       run: ./vendor/bin/phpunit
-      
+
   format:
     runs-on: ubuntu-latest
     permissions:
